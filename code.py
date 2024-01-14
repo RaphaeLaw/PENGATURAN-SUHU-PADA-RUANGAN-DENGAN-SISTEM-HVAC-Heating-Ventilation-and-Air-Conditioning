@@ -48,24 +48,27 @@ def fungsiinferensisangatrendah(value_suhu, value_orang):
     if value_suhu!=0 :
        if value_orang!=0:
            hasil_fungsi = min(value_suhu, value_orang)
-           speed.append([hasil_fungsi,25])
+           speed.append([hasil_fungsi,0.2])
 def fungsiinferensiagakrendah(value_suhu, value_orang):
     if value_suhu!=0 :
        if value_orang!=0:
            hasil_fungsi = min(value_suhu, value_orang)
-           speed.append([hasil_fungsi,40])
+           speed.append([hasil_fungsi,0.4])
 def fungsiinferensiagakkencang(value_suhu, value_orang):
     if value_suhu!=0 :
        if value_orang!=0:
            hasil_fungsi = min(value_suhu, value_orang)
-           speed.append([hasil_fungsi,60])
+           speed.append([hasil_fungsi,0.6])
 def fungsiinferensisangatkencang(value_suhu, value_orang):
     if value_suhu!=0 :
        if value_orang!=0:
            hasil_fungsi = min(value_suhu, value_orang)
-           speed.append([hasil_fungsi,80])
+           speed.append([hasil_fungsi,0.8])
 
 fungsiinferensisangatrendah(value_dingin, value_sedikit)
 fungsiinferensiagakrendah(value_panas, value_sedikit)
 fungsiinferensiagakkencang(value_dingin, value_banyak)
 fungsiinferensisangatkencang(value_panas, value_banyak)
+
+
+print("Hasil keputusan Kecepatan adalah = ", speed)
