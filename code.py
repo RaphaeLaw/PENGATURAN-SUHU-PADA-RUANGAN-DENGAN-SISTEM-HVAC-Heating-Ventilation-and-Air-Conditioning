@@ -2,7 +2,7 @@
 "Metode Sugeno"
 
 print("PENGATURAN SUHU PADA RUANGAN DENGAN SISTEM HVAC")
-suhu=int(input("Masukan Nilai Suhu yang diinginkan (C) : "))
+suhu=int(input("Masukan Nilai Suhu saat ini (C) : "))
 orang=int(input("Banyak Orang pada Ruangan : "))
 
 #Fuzzifikasi Suhu
