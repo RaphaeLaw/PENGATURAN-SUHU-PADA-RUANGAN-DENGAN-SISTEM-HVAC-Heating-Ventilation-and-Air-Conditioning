@@ -68,3 +68,4 @@ def fungsiinferensisangatkencang(value_suhu, value_orang):
 fungsiinferensisangatrendah(value_dingin, value_sedikit)
 fungsiinferensiagakrendah(value_panas, value_sedikit)
 fungsiinferensiagakkencang(value_dingin, value_banyak)
+fungsiinferensisangatkencang(value_panas, value_banyak)
