@@ -69,6 +69,7 @@ fungsiinferensiagakrendah(value_panas, value_sedikit)
 fungsiinferensiagakkencang(value_dingin, value_banyak)
 fungsiinferensisangatkencang(value_panas, value_banyak)
 
+#Defuzzifikasi
 x1 = 0
 x2 = 0
 for index in indexes:
@@ -87,20 +88,20 @@ fuzzy_decision = [0, 0, 0, 0]
 if(decision_index <= 0.2):
     fuzzy_decision[0] = 1
 if(decision_index > 0.2 and decision_index <= 0.4):
-    x2 = decision_index - 0.2        #jarak ke index sangat rendah
-    x1 = 0.4 - decision_index        #jarak ke index agak rendah
+    x2 = decision_index - 0.2       #jarak ke index sangat rendah
+    x1 = 0.4 - decision_index       #jarak ke index agak rendah
     x3 = x1 + x2
     fuzzy_decision[0] = x1 / x3
     fuzzy_decision[1] = x2 / x3
 if(decision_index > 0.4 and decision_index <= 0.6):
-    x2 = decision_index - 0.4        #jarak ke index agak rendah
-    x1 = 0.6 - decision_index        #jarak ke index agak kencang
+    x2 = decision_index - 0.4       #jarak ke index agak rendah
+    x1 = 0.6 - decision_index       #jarak ke index agak kencang
     x3 = x1 + x2
     fuzzy_decision[1] = x1 / x3
     fuzzy_decision[2] = x2 / x3
 if(decision_index > 0.6 and decision_index <= 0.8):
-    x2 = decision_index - 0.6        #jarak ke index agak kencang
-    x1 = 0.8 - decision_index        #jarak ke index sangat kencang
+    x2 = decision_index - 0.6       #jarak ke index agak kencang
+    x1 = 0.8 - decision_index       #jarak ke index sangat kencang
     x3 = x1 + x2
     fuzzy_decision[2] = x1 / x3
     fuzzy_decision[3] = x2 / x3
