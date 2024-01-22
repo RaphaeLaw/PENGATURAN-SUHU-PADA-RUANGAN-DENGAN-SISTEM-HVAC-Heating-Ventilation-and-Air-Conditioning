@@ -86,27 +86,27 @@ print("Crisp Decision Index : {:.4f}".format(decision_index))
 
 fuzzy_decision = [0, 0, 0, 0]
 if(decision_index <= 0.2):
-    fuzzy_decision[0] = 1
+    fuzzy_decision[0] = 1           #Hasil Fuzzy Decision sangat rendah
 if(decision_index > 0.2 and decision_index <= 0.4):
     x2 = decision_index - 0.2       #jarak ke index sangat rendah
     x1 = 0.4 - decision_index       #jarak ke index agak rendah
-    x3 = x1 + x2
-    fuzzy_decision[0] = x1 / x3
-    fuzzy_decision[1] = x2 / x3
+    x3 = x1 + x2                    #Total Jarak sangat rendah ke agak rendah
+    fuzzy_decision[0] = x1 / x3     #Hasil Fuzzy Decision Sangat Rendah
+    fuzzy_decision[1] = x2 / x3     #Hasil Fuzzy Decision Agak Kencang
 if(decision_index > 0.4 and decision_index <= 0.6):
     x2 = decision_index - 0.4       #jarak ke index agak rendah
     x1 = 0.6 - decision_index       #jarak ke index agak kencang
-    x3 = x1 + x2
-    fuzzy_decision[1] = x1 / x3
-    fuzzy_decision[2] = x2 / x3
+    x3 = x1 + x2                    #Total Jarak agak rendah ke agak kencang
+    fuzzy_decision[1] = x1 / x3     #Hasil Fuzzy Decision agak rendah
+    fuzzy_decision[2] = x2 / x3     #Hasil Fuzzy Decision agak kencang
 if(decision_index > 0.6 and decision_index <= 0.8):
     x2 = decision_index - 0.6       #jarak ke index agak kencang
     x1 = 0.8 - decision_index       #jarak ke index sangat kencang
-    x3 = x1 + x2
-    fuzzy_decision[2] = x1 / x3
-    fuzzy_decision[3] = x2 / x3
+    x3 = x1 + x2                    #Total Jarak agak kencang ke Sangat Kencang
+    fuzzy_decision[2] = x1 / x3     #Hasil Fuzzy Decision agak kencang
+    fuzzy_decision[3] = x2 / x3     #Hasil Fuzzy Decision sangat kencang
 if(decision_index > 0.8):
-    fuzzy_decision[3] = 1
+    fuzzy_decision[3] = 1           #Hasil Fuzzy Decision sangat kencang
 
 print("Fuzzy Decision Index : ")
 if(fuzzy_decision[0] > 0):
